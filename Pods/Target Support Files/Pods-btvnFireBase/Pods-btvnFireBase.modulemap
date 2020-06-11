@@ -1,0 +1,6 @@
+framework module Pods_btvnFireBase {
+  umbrella header "Pods-btvnFireBase-umbrella.h"
+
+  export *
+  module * { export * }
+}
