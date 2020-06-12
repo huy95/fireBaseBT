@@ -42,6 +42,7 @@ extension UIView{
         textField.anchor(top: nil, left: imageView.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 0, paddingRight: 8, paddingLeft: 12, paddingBottom: 0, width: 0, height: 0)
         let underText = UIView()
         underText.backgroundColor = UIColor(white: 1, alpha: 0.87 )
+        
         view.addSubview(underText)
         underText.anchor(top: nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingRight: 8, paddingLeft: 0, paddingBottom: 0, width: 0, height: 1)
         return view

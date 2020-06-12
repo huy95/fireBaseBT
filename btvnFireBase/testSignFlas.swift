@@ -33,12 +33,12 @@ class testSignFlas: UIViewController {
     @IBAction func buttonSignUp(_ sender: Any) {
        if let email = emailText.text, let password = passtext.text,
         let confirm = confirmPass.text
-       { if (confirm == password ){
-            
+       { if (confirm == password){
            Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
              guard let user = authResult?.user, error == nil else{
                print("error \(error?.localizedDescription)")
                return
+                
              }
              print(user)
            }
@@ -46,8 +46,13 @@ class testSignFlas: UIViewController {
         let ok = UIAlertAction(title: "OK", style: .default)
         self.alertControll?.addAction(ok)
         self.present(self.alertControll!, animated: true)
-         
        }
+       else {
+        self.alertControll = UIAlertController(title: "nhap lai", message: "nhap sai mk hoac tk", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default)
+        self.alertControll?.addAction(ok)
+        self.present(self.alertControll!, animated: true)
+        }
     }
     }}
 //    func createUser(email: String, password: String, userName: String){
